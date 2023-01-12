@@ -1,0 +1,32 @@
+{
+  // Node LTS + ESM + Strictest https://github.com/tsconfig/bases#node-lts--esm--strictest-tsconfigjson
+  "extends": "@tsconfig/node-lts-strictest-esm/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "baubles/*": [
+        "src/*"
+      ]
+    },
+    "declaration": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "src"
+  ],
+  // Options for ts-node. Doesn't affect tsc.
+  "ts-node": {
+    // It is faster to skip typechecking, remove to enable typechecking.
+    "transpileOnly": true,
+    "files": true,
+    // overrides compilerOptions defined in the base config.
+    "compilerOptions": {
+      // todo: "Useful if you want ts-node and tsc to use different options with a single tsconfig.json"
+    },
+    // Use the SWC compiler instead of the default TypeScript compiler (rust is op).
+    "swc": true,
+    // Tell ts-node CLI to install the --loader automatically.
+    "esm": true
+  }
+}
