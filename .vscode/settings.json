@@ -9,9 +9,6 @@
     "**/node_modules": false
   },
   "files.eol": "\r\n",
-  // "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  // "editor.codeActionsOnSave": {
-  //   "source.fixAll.eslint": true
-  // }
+  "typescript.tsdk": "node_modules\\typescript\\lib",
 }

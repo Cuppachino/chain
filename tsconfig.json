@@ -10,7 +10,18 @@
       ]
     },
     "declaration": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    /*
+    * `"module"` changes how project files are transformed by TypeScript. 
+    ! It does not change how the code is executed.
+    ? Follow these rules and you'll be fine:
+    - Use `"NodeNext"` in TypeScript (module, moduleResolution)
+    - Use the `".cts"` extension in your files.
+    */
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "alwaysStrict": true
   },
   "include": [
     "src"
